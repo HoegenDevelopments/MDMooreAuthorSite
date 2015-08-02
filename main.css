@@ -1,0 +1,41 @@
+li{list-style:none;}
+a{color:black;font-weight:bold;}
+#headline{padding-top:150px;}
+.menu li a{font-size:20px;font-family:'Maven Pro', sans-serif;color:black;text-decoration:none;}
+.menu li a:hover{color:gray;}
+.menu li{padding-top:10px;}
+.title{font-size:45px;font-family:'Maven Pro', sans-serif;}
+.sub-header{font-size:25px;font-family:'Maven Pro', sans-serif;}
+#menus{padding-top:100px;position:fixed;z-index:1000}
+.navigation{width:100%;height:100%;position:fixed;top:0;right:0;bottom:0;left:0;z-index:0;list-style:none;background:#111;}
+.nav-item{width:200px;border-top:1px solid #111;border-bottom:1px solid #000;}
+.nav-item a{display:block;padding:1em;background:black;color:white;font-size:1.2em;text-decoration:none;}
+.nav-item a:hover{background:darkslategray}
+.site-wrap{min-height:100%;min-width:100%;background-color:white;position:relative;top:0;bottom:100%;left:0;z-index:1;padding:4em;background-image:linear-gradient(135deg, rgb(254,255,255) 0%,rgb(221,241,249) 35%,rgb(160,216,239) 100%);background-size:200%;}
+.nav-trigger{position:absolute;clip:rect(0, 0, 0, 0);}
+label[for="nav-trigger"]{position:fixed;left:15px;top:15px;z-index:2;height:30px;width:30px;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");background-size:contain;}
+.nav-trigger + label, .site-wrap{transition:left 0.2s;}
+.nav-trigger:checked + label{left:215px;}
+.nav-trigger:checked ~ .site-wrap{left:200px;box-shadow:0 0 5px 5px rgba(0,0,0,0.5);}
+body{overflow-x:hidden;}
+h1, h3, p{max-width:100%;margin:0 auto 1em;}
+code{padding:2px;background:#ddd;}
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body{height:100%;width:100%;font-family:Helvetica, Arial, sans-serif;}
+.bio{padding-top:50px}
+.book_underline{text-decoration:underline;}
+@media only screen and (max-width:750px){#headline{padding-top:0px;}
+.title{font-size:25px;padding-top:0px}
+.sub-header{font-size:15px}
+}
+@media only screen and (max-width:850px){.menu a:link{font-size:15px;}
+#menus{display:none}
+.col-lg-4 img{display:none;}
+.cover{width:100%;}
+}
+@media only screen and (min-width:851px){.navigation{display:none;}
+.nav-item{display:none;}
+.nav-trigger{display:none;}
+label[for="nav-trigger"]{display:none;}
+.menu-div{padding-left:200px;}
+}
